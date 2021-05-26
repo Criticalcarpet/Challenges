@@ -1,6 +1,0 @@
-# Rumbo  
-> Rumbo is a Fizz buzz npm CLI...
-
-## Installation  
-- ` npm install -g rumbo `
-- After installation type `rumbo` in your terminal and see the magic...
