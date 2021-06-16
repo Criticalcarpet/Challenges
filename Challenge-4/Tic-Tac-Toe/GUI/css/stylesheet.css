@@ -1,0 +1,334 @@
+body {
+    background-color: #FFF;
+    background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+.info {
+    font-size: 2em !important;
+}
+
+.msgbox {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    z-index: 9999;
+}
+
+.msgbox div {
+    padding: 5px 15px;
+}
+
+.msgbox div {
+    margin: 5px !important;
+}
+
+.msgbox .msg-wrapper {
+    background-color: #fff;
+    box-shadow: 0px 0px 40px 0px #b95ed7;
+    border-radius: 5px;
+    height: 210px;
+    margin-bottom: 8px !important;
+    padding: 20px 10px;
+    overflow: auto;
+}
+
+.msgp {
+    border: 1px solid #b95ed7;
+    padding: 3px 10px;
+    background-color: #c30efe80;
+    display: inline;
+    color: #fff;
+    max-width: 150px;
+    border-radius: 1em;
+    cursor: default;
+}
+
+.msgp.other {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.msgp-wrapper {
+    height: auto;
+    overflow: overlay;
+    padding: 0 !important;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.emoji-sel {
+    font-size: 32px;
+    height: 24px;
+}
+
+.emoji-sel i {
+    vertical-align: super;
+    position: relative;
+    bottom: 16px;
+}
+
+.emoji-wrapper .pre-msg {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 7px !important;
+}
+
+.emoji-wrapper .pre-msg span {
+    font-size: 13px !important;
+    margin-right: 0px !important;
+    border-radius: 2em;
+    border: 1.5px solid #00000091;
+    color: #00000091;
+    font-weight: bold;
+    padding: 2px 10px;
+    margin-bottom: 5px !important;
+    margin-bottom: 6px !important;
+    display: inline-block;
+}
+
+.emoji-wrapper {
+    position: absolute;
+    box-shadow: 0px 0px 40px 0px #00000091;
+    bottom: 35px;
+    background: #fff;
+    z-index: 9;
+    padding: 10px !important;
+    text-align: left;
+    border-radius: 5px;
+    height: 190px;
+    overflow: auto;
+    height: 210px;
+    width: 250px;
+    left: 0;
+}
+
+.emoji-wrapper span {
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.msgbox input {
+    height: 25px !important;    
+    display: inline-block !important;
+    width: 72% !important;
+}
+
+.msgbox .send {
+    margin-left: 3px !important;
+}
+
+.msgf-wrapper {
+    box-shadow: 0px 0px 40px 0px #b95ed7;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px 7px 5px 15px !important;
+}
+
+.msgf-wrapper::before {
+    content: " .";
+    border-radius: 0 0 0 60px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 0;
+    left: -3px;
+    color: transparent;
+    background-color: #fff;
+    left: -4px;
+    top: 3px;
+}
+
+
+
+.msgbox-wrapper {
+    position: relative;
+}
+
+.msgbox * {
+    margin: 0 !important;
+}
+
+._row{
+	height: 100px;
+}
+
+._col{
+	height: 100px;
+	width: 100px;
+	float: left;
+	font-size: 100px;
+	text-align: center;
+	line-height: 100px;
+
+}
+
+._col:hover{
+    cursor: pointer;
+    background-color: #27aae15c;
+}
+
+._col{
+    transition: ease-in-out;
+    -webkit-transition: ease-in-out;
+    transition-delay: 5ms;
+    animation: ease-in-out;
+    animation-delay: 5ms;
+
+}
+.border_f
+{
+	border-bottom: 10px solid #17406A;
+	width: 92%;
+}
+.border_s
+{
+	border-right: 10px solid #17406A;
+}
+.winner {
+	color: green;
+}
+.wrapper {
+    width:100%;
+    display: inline-grid;
+}
+.back {
+	width: 30%;
+    height: 500px;
+    background-color: #14bdac;
+    float: left;
+    margin: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.play img {
+	width: 140px;
+    height: 140px;
+    margin: auto;
+    margin-left: 115px;
+    margin-top: 20px;
+}
+.play h2{
+	margin-top: 0px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #2B60DE;
+}
+.feild
+{
+	padding: 2px;
+    margin: auto;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.alt
+{
+	color: red;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.vnone {
+    visibility: hidden;
+}
+
+.face img {
+    border-radius: 100%;
+    border: 3px solid #2B60DE;
+    display: block;
+    height: 70px;
+    background: #2B60DE;
+}
+
+.info .msg {
+    vertical-align: text-bottom;
+    position: absolute;
+    right: -14px;
+    margin: -3px 0;
+    z-index: 0; 
+}
+
+.info .you, .info .opponent {
+    position: absolute;
+}
+
+.info .you {
+    bottom: 0;
+    max-width: 61px;
+    min-width: 61px;
+}
+
+.rel {
+    position: relative;
+}
+
+.end-match {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.info p {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sidep {
+    height: 300px;
+    min-height: 400px !important;
+    position: relative;
+}
+
+.nav {
+    margin: 10px 0;
+}
+
+.symbol {
+    position: absolute;
+    color: #fff;
+    cursor: default;
+    font-size: 10px;
+    background: #2b60de;
+    border-radius: 100%;
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.you .symbol {
+    top: 0px;
+    right: 5px;
+}
+
+.opponent .symbol {
+    top: 0px;
+    right: 5px;
+}
+
+.active {
+    background: #228b1c;
+    border: 1px solid #228b1c !important;
+}
