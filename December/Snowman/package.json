@@ -1,0 +1,23 @@
+{
+  "name": "snowman",
+  "version": "1.0.0",
+  "description": "December Challenge-1 (Build a snowman)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node src/index.js"
+  },
+  "keywords": [
+    "December_Challenge-1",
+    "r/Coding-help"
+  ],
+  "author": "Criticalcarpet",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.4.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "express": "^4.17.1"
+  }
+}
