@@ -1,5 +1,6 @@
 import { createRequire } from 'module'
 import path from 'path'
+import chalk from 'chalk'
 const require = createRequire(import.meta.url)
 const { MultiSelect } = require('enquirer')
 const fs = require('fs')
@@ -18,23 +19,29 @@ const prompt = new MultiSelect({
 
 export const promptRunner = async (resolved) => {
   const promptChoice = await prompt.run()
-  console.log(promptChoice)
+  clear()
   if (!promptChoice.length) {
-    clear()
-    console.log('\nPlease select at least one method.')
-    process.exit(1)
+    throw new Error('⚠ Please select at least one method.')
   }
-  if (promptChoice.includes('Console')) {
+  if (promptChoice.includes('Console') && !promptChoice.includes('JSON file')) {
     if (resolved.length > 10) {
-      clear()
-      console.log('\nThe resultant array is too long to display in console.\nPlease select another method.')
+      console.warn('⚠ The resultant array is too long to display in console.\nPlease select another method.')
       return
     }
     console.log(resolved)
-  } else if (promptChoice.includes('JSON file')) {
-    clear()
+  } else if (promptChoice.includes('JSON file') && !promptChoice.includes('Console')) {
     const filePath = path.join(path.resolve(__dirname), '../../showcase.json')
     fs.writeFileSync(filePath, JSON.stringify(resolved, null, 2))
-    console.log(`\nThe resultant array has been saved to ${filePath}.`)
+    console.log(chalk.blueBright(`❗ The resultant array has been saved to ${filePath}.`))
+  } else if (promptChoice.includes('Console') && promptChoice.includes('JSON file')) {
+    console.log(promptChoice)
+    if (resolved.length > 10) {
+      console.warn('⚠ The resultant array is too long to display in console.\nPlease select another method.')
+      return
+    }
+    console.log(resolved)
+    const filePath = path.join(path.resolve(__dirname), '../../showcase.json')
+    fs.writeFileSync(filePath, JSON.stringify(resolved, null, 2))
+    console.log(chalk.blueBright(`❗The resultant array has been saved to ${filePath}.`))
   }
 }
